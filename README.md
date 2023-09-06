@@ -15,23 +15,23 @@
 
 ## Download
 
-* [Download from Github Release](https://github.com/toyobayashi/mishiro/releases)  
+* [Github Releases](https://github.com/toyobayashi/mishiro/releases)  
 <!-- * [Download from Gitee Release (Chinese user)](https://gitee.com/toyobayashi/mishiro/releases)   -->
 
 Note：
 
-* Do not install mishiro in a path which includes Chinese or Japanese characters.
+* **Do not install mishiro in a path which includes Chinese or Japanese characters**.
 
-* If you have trouble to launch or experience any error, try to install the latest version.
+* If you have trouble to launch or experience any error, try to install the [latest version](https://github.com/toyobayashi/mishiro/releases/tag/v2.6.3).
 <!-- * Mac users please refer to the following building steps and [Electron's document](http://electronjs.org/docs/tutorial/application-distribution) to compile and pack mishiro. -->
 
 ## Screenshot
 
 ![screenshot.png](https://github.com/toyobayashi/mishiro/raw/master/img/screenshot.png)
 
-## Feature
+## Features
 
-* Support language: Chinese / Japanese / English.
+* Support languages: Chinese / Japanese / English.
 * [ HOME ] Get game resources. (unity3d, acb, bdb, mdb)
 * [ IDOL ] Search idol card, get card background png / character voice.
 * [ COMMU ] Producer searching.
@@ -45,7 +45,7 @@ Repo: [mishiro-score-viewer](https://github.com/toyobayashi/mishiro-score-viewer
 
 ## Development & Building
 
-### Windows Require
+### Windows Prerequisites
 
 * __Windows 7+__
 * __Node.js 12+__
@@ -53,7 +53,7 @@ Repo: [mishiro-score-viewer](https://github.com/toyobayashi/mishiro-score-viewer
 * __Visual Studio 2015/2017/2019 with C++ Desktop workload installed__
 * __.NET & Powershell__  
 
-### Linux Require
+### Linux Prerequisites
 
 * __Node.js 12+__
 * __Python 2.7__
@@ -61,7 +61,7 @@ Repo: [mishiro-score-viewer](https://github.com/toyobayashi/mishiro-score-viewer
 * __make__
 * __zip & unzip__
 
-### MacOS Require (This part is not tested)
+### MacOS Prerequisites (Your mileage may vary)
  
 * __Node.js 12+__
 * __Python 2.7__
@@ -175,4 +175,4 @@ Special thanks:
 
 
 ## Copyright
-The copyright of CGSS and its related content is held by [BANDAI NAMCO Entertainment Inc.](https://bandainamcoent.co.jp/)  
+The copyright of Cinderella Girls and its related content are held by [BANDAI NAMCO Entertainment Inc.](https://bandainamcoent.co.jp/)  

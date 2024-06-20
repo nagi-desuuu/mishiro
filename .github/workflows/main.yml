@@ -9,13 +9,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
+        os: [windows-latest, ubuntu-latest, macos-13, macos-14]
 
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       with:
-        node-version: '14.x'
+        node-version: '18.17.1'
         registry-url: 'https://registry.npmjs.org'
 
     - name: Get npm cache directory
@@ -44,7 +44,7 @@ jobs:
         ./app/script/build.sh
 
     - name: macOS build
-      if: ${{ matrix.os == 'macos-latest' }}
+      if: ${{ contains(matrix.os, 'macos') }}
       shell: bash
       run: |
         chmod +x ./app/script/build.sh
@@ -57,12 +57,16 @@ jobs:
         MISHIRO_NO_PROGRESS: '1'
 
     - name: Pack x64
-      if: ${{ startsWith(github.event.ref, 'refs/tags') }}
+      if: ${{ startsWith(github.event.ref, 'refs/tags') && matrix.os != 'macos-14' }}
       run: cd app&&npm run pack:x64&&cd ..
 
     - name: Pack ia32
       if: ${{ startsWith(github.event.ref, 'refs/tags') && matrix.os == 'windows-latest' }}
       run: cd app&&npm run pack:ia32&&cd ..
+
+    - name: Pack arm64
+      if: ${{ startsWith(github.event.ref, 'refs/tags') && matrix.os == 'macos-14' }}
+      run: cd app&&npm run pack:arm64&&cd ..
 
     - name: Create release
       if: ${{ startsWith(github.event.ref, 'refs/tags') }}
